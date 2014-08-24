@@ -9,31 +9,26 @@
  */
 
 
-var num1 = 1;
-    num2 = 2,
-    maxValue = 4e6,
-    fNumbers = num2;
+var num1 = 0,
+    num2 = 1,
+    fNumbers = [];
 
-do {
+while ( num1 + num2 < 4e6 ) {
+
   num1 += num2;
-  if (num1 > maxValue) {
-    break;
-  } else {
-    if (num1 % 2 === 0) {
-      console.log(num1);
-      fNumbers += num1;
-    };
+  if ( num1 % 2 === 0) {
+    fNumbers.push(num1);
   };
+
   num2 += num1;
-  if (num2 > maxValue) {
-    break;
-  } else {
-    if (num2 % 2 === 0){
-    console.log(num2);
-    fNumbers += num2;
-    };
-  };
-} while ( num1 < maxValue || num2 < maxValue);
+  if ( num2 % 2 === 0) {
+    fNumbers.push(num2);
+  }
 
+};
 
-console.log(fNumbers);
+var sum = fNumbers.reduce(function(prev, cur){
+  return prev + cur;
+})
+
+console.log(sum);
