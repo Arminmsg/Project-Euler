@@ -11,10 +11,10 @@ for(j = 3; j < 110000; j++) {
   var currentNum = j,
       teilbar = false;
   for(var i = 0; i < prime.length; i++) {
-    var moduloRest = currentNum % prime[i];
-    if (moduloRest === 0) {
-      teilbar = true;
-    }
+      var moduloRest = currentNum % prime[i];
+      if (moduloRest === 0) {
+        teilbar = true;
+      }
   }
   if(teilbar === false) {
     prime[prime.length] = currentNum;
