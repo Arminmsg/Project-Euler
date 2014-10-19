@@ -30,15 +30,19 @@ var x = "73167176531330624919225119674426574742355349194934969835203127745063262
 
 var numberArray = x.map(function(element) {
   return parseInt(element);
-})
+});
 
 var foo = 0;
 
-while(numberArray.length > 12) {
-   var x = numberArray[0]*numberArray[1]*numberArray[2]*numberArray[3]*numberArray[4]*numberArray[5]*numberArray[6]*numberArray[7]*numberArray[8]*numberArray[9]*numberArray[10]*numberArray[11]*numberArray[12];
-   numberArray.shift();
-   console.log();
+while(numberArray.length > 0) {
+  var x = numberArray[0];
+
+  for(var i = 1; i < 13; i++) {
+    x *= numberArray[i];
+  }
+
+  numberArray.shift();
    if( x > foo ) {
     foo = x;
    }
-}
+};
