@@ -32,8 +32,8 @@ var numberArray = x.map(function(element) {
   return parseInt(element);
 });
 
-var foo = 0;
 
+var highesNum = 0;
 while(numberArray.length > 0) {
   var x = numberArray[0];
 
@@ -42,7 +42,7 @@ while(numberArray.length > 0) {
   }
 
   numberArray.shift();
-   if( x > foo ) {
-    foo = x;
+   if( x > highesNum ) {
+    highesNum = x;
    }
 };
