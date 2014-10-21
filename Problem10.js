@@ -1,3 +1,9 @@
+/*
+ *The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+ *
+ *Find the sum of all the primes below two million.
+ */
+
 var allNum = [];
 var primes = [];
 //Creates numbers
@@ -18,6 +24,6 @@ while(allNum.length > 0) {
 
 }
 
-var foo = primes.reduce(function(current, prev) {
+var primeSum = primes.reduce(function(current, prev) {
     return current + prev;
 });
